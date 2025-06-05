@@ -4,7 +4,7 @@
 
 This MCP server exposes DigitalOcean App Platform functionality through standardized tools that can be used by any MCP client, including [Claude Desktop](https://claude.ai/download) and [Cursor](https://docs.cursor.com/context/model-context-protocol). It enables AI assistants to directly manage your DigitalOcean apps without writing code or memorizing API endpoints.
 
-
+[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=digitalocean&config=eyJjb21tYW5kIjoibnB4IEBkaWdpdGFsb2NlYW4vbWNwIiwiZW52Ijp7IkRJR0lUQUxPQ0VBTl9BUElfVE9LRU4iOiJZT1VSX0RPX1RPS0VOIn19)
 ---
 
 ## 📚 Table of Contents
