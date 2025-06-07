@@ -1,6 +1,7 @@
 import { createApiClient } from "./specs/digitalocean-openapi.yaml.zod";
 import { ApiClient } from "./specs/digitalocean-openapi.yaml.zod";
 import logger from "./logger";
+import { LIB_VERSION } from "./version";
 const BASE_URL = "https://api.digitalocean.com";
 
 function getToken() {
@@ -29,7 +30,7 @@ export function createClient(params: { sessionId?: string } = {}): {
 } {
   const token = getToken();
   const sharedHeaders: Record<string, string> = {
-    "User-Agent": "ModelContext/0.1.0",
+    "User-Agent": `digitalocean-mcp/${LIB_VERSION}`,
     Authorization: `Bearer ${token}`,
     "Content-Type": "application/json",
     Accept: "application/json",
