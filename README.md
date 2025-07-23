@@ -1,30 +1,34 @@
 # DigitalOcean MCP Server
 
+> **⚠️ ARCHIVE NOTICE**  
+> This repository has been archived. Please use **[@digitalocean-labs/mcp-digitalocean](https://github.com/digitalocean-labs/mcp-digitalocean/)**
+
 [![npm version](https://img.shields.io/npm/v/@digitalocean/mcp.svg)](https://www.npmjs.com/package/@digitalocean/mcp) [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 This MCP server exposes DigitalOcean App Platform functionality through standardized tools that can be used by any MCP client, including [Claude Desktop](https://claude.ai/download) and [Cursor](https://docs.cursor.com/context/model-context-protocol). It enables AI assistants to directly manage your DigitalOcean apps without writing code or memorizing API endpoints.
 
-[![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=digitalocean&config=eyJjb21tYW5kIjoibnB4IEBkaWdpdGFsb2NlYW4vbWNwIiwiZW52Ijp7IkRJR0lUQUxPQ0VBTl9BUElfVE9LRU4iOiJZT1VSX0RPX1RPS0VOIn19)
----
+## [![Install MCP Server](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/install-mcp?name=digitalocean&config=eyJjb21tYW5kIjoibnB4IEBkaWdpdGFsb2NlYW4vbWNwIiwiZW52Ijp7IkRJR0lUQUxPQ0VBTl9BUElfVE9LRU4iOiJZT1VSX0RPX1RPS0VOIn19)
 
 ## 📚 Table of Contents
 
-* [🚀 What Can You Do With It?](#-what-can-you-do-with-it)
-* [🧰 Prerequisites](#-prerequisites)
-* [⚙️ Setting up your DigitalOcean MCP Server](#️-setting-up-your-digitalocean-mcp-server)
+- [🚀 What Can You Do With It?](#-what-can-you-do-with-it)
+- [🧰 Prerequisites](#-prerequisites)
+- [⚙️ Setting up your DigitalOcean MCP Server](#️-setting-up-your-digitalocean-mcp-server)
 
-  * [Generate Your API Token](#1-generate-your-api-token)
-  * [Add the Server to Your MCP Client](#2-add-the-server-to-your-mcp-client)
-  * [Claude Desktop](#claude-desktop)
-  * [Cursor](#cursor)
-  * [Windsurf Setup](#windsurf-setup)
-* [💬 Example Prompts](#-example-prompts)
-* [🛠 Available Tools](#available-tools)
-* [🧯 Troubleshooting](#troubleshooting)
-* [🤝 Contributing](#contributing)
-* [📄 License](#license)
+  - [Generate Your API Token](#1-generate-your-api-token)
+  - [Add the Server to Your MCP Client](#2-add-the-server-to-your-mcp-client)
+  - [Claude Desktop](#claude-desktop)
+  - [Cursor](#cursor)
+  - [Windsurf Setup](#windsurf-setup)
+
+- [💬 Example Prompts](#-example-prompts)
+- [🛠 Available Tools](#available-tools)
+- [🧯 Troubleshooting](#troubleshooting)
+- [🤝 Contributing](#contributing)
+- [📄 License](#license)
 
 ---
+
 ## 🚀 What Can You Do With It?
 
 You can now do things like:
@@ -40,28 +44,30 @@ You can now do things like:
 ---
 
 ## 🧰 Prerequisites
+
 To use the DigitalOcean MCP Server, you’ll need:
 
-- **Node.js** (≥ 12) & **npm**  
-- A [DigitalOcean Personal Access Token](https://cloud.digitalocean.com/account/api/tokens) with **App Platform** scopes  
+- **Node.js** (≥ 12) & **npm**
+- A [DigitalOcean Personal Access Token](https://cloud.digitalocean.com/account/api/tokens) with **App Platform** scopes
 - A supported MCP client:
   - [Claude Desktop](https://claude.ai/download) (v1.9+)
   - [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)
   - [Cursor](https://docs.cursor.com/context/model-context-protocol)
   - [Windsurf](https://windsurf.com)
-- (Optional but helpful): [GitHub CLI (gh)](https://cli.github.com) -  useful for cloning repos, creating projects, and working with GitHub-based apps.
+- (Optional but helpful): [GitHub CLI (gh)](https://cli.github.com) - useful for cloning repos, creating projects, and working with GitHub-based apps.
 
 > 💡 You do not need to install anything—this server runs via npx, with just a one-line config added to your MCP client.
-
 
 ---
 
 ## ⚙️ Setting up your DigitalOcean MCP Server
 
 ### 1. Generate Your API Token
+
 Head to [DigitalOcean’s API settings](https://cloud.digitalocean.com/account/api/tokens) and create a new **Personal Access Token** with **App Platform** permissions.
 
 ### 2. Add the Server to Your MCP Client
+
 Add this JSON snippet to your client’s MCP config file:
 
 ```json
@@ -80,9 +86,9 @@ Add this JSON snippet to your client’s MCP config file:
 
 Here’s what each part of the snippet does:
 
-- * **command**: how to launch the server (`npx` or full path)
-- * **args**: the package name
-- * **env**: insert your DO token here
+- - **command**: how to launch the server (`npx` or full path)
+- - **args**: the package name
+- - **env**: insert your DO token here
 
 Then follow the instructions for your specific tool:
 
@@ -95,8 +101,7 @@ Then follow the instructions for your specific tool:
 5. You'll see “digitalocean” listed as an available server
 
 ![Claude Desktop MCP Setup](https://github.com/user-attachments/assets/15ff8aed-c2ff-4bba-a0cc-0efabfdb0bcd)
-*Setting up DigitalOcean MCP Server in Claude Desktop*
-
+_Setting up DigitalOcean MCP Server in Claude Desktop_
 
 ### Cursor
 
@@ -108,7 +113,7 @@ Then follow the instructions for your specific tool:
 6. You should now see “digitalocean” in Cursor’s MCP settings
 
 ![Cursor MCP Setup](https://github.com/user-attachments/assets/da87617b-a368-4ffb-a5f1-2d3fa9a168a4)
-*Setting up DigitalOcean MCP Server in Cursor*
+_Setting up DigitalOcean MCP Server in Cursor_
 
 ### Windsurf Setup
 
@@ -121,9 +126,10 @@ Then follow the instructions for your specific tool:
 
 ![Windsurf MCP Setup](https://github.com/user-attachments/assets/4408c955-34bd-4f51-92a9-b971bebbd785)
 
-*Setting up DigitalOcean MCP Server in Windsurf*
+_Setting up DigitalOcean MCP Server in Windsurf_
 
 ---
+
 ## 💬 Example Prompts
 
 Once it’s configured, try asking your assistant:
@@ -158,14 +164,17 @@ The assistant will send the request → the MCP server talks to DigitalOcean →
 ## Troubleshooting
 
 ### The server doesn’t appear in your client?
+
 - Make sure your JSON config is saved and valid
 - Restart your MCP client (Claude, Cursor, Windsurf)
 
 ### Token not working?
+
 - Check that it has App Platform access
 - Try generating a fresh one
 
 ### JSON errors?
+
 - No trailing commas
 - No comments allowed in JSON
 
@@ -178,6 +187,7 @@ npx @digitalocean/mcp
 ---
 
 ## Contributing
+
 We’d love your help improving this! Bug reports, new features, and docs improvements are all welcome.
 
 1. Fork this repo
