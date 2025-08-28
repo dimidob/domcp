@@ -59,14 +59,18 @@ Then download 5ire App and complete the MCP setup:
 
  **1.** In 5ire App go to **Tools** and click on **+Local button**
  **2.** This will open the Add New Tool modal. Fill in the following details:
-- **openvpnmcp** as **Tool Key**
-- **OpenVPN MCP** as **Name**
-- **http://0.0.0.0:9999/sse** as **URL**
+- **Tool Key**: **openvpnmcp** 
+- **Name**: **OpenVPN MCP** 
+- **URL**: **http://0.0.0.0:9999/sse** 
   
  **3.** Click **Save** 
+
  **4.** Switch the **toggle** to **ON** to turn on the MCP server
+ 
  **6.** Head to **Workspace → Providers** and add your LLM Provider API key
+ 
  **7.** Click **New Chat**
+ 
  **8.** Select your desired LLM model and enter the prompt: **"Discover graphql_schema and tell me what tools are available?"**
 
 That's it, your MCP server is now connected to 5ire App and you can ask your AI assistant to execute any of the available tools. Check out the example prompts section in this README for some suggestions.
