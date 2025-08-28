@@ -46,7 +46,7 @@ Log in to [CloudConnexa](https://openvpn.net/cloud-vpn/) and navigate to **API &
 
 Fill in a name, click **Create**, and copy your **Public API Client ID** and **Public API Client Secret**
 
-Toggle **Enable API for this Cloud ID** should be set to **ON**
+Toggle **Enable API for this Cloud ID** should be set to **enabled**
 
 #### 2. In the root of the downloaded repository build the docker container:
 `docker build -t mcp-server-public .`
