@@ -8,10 +8,10 @@ This MCP server enables interaction with your CloudConnexa environment through s
 
 - [ Prerequisites](#-prerequisites)
 - [⚙️ Setting up your OpenVPN MCP Server for CloudConnexa](#️-setting-up-your-openvpn-mcp-server-for-cloudconnexa)
-- [🤖 Add the MCP Server to Your MCP Client](#5ire-app-setup)
+- [🤖 Addding the MCP Server to 5ire App](#5ire-app-setup)
+- [🤖 How to add GPT-5 model to 5ire App](#adding-gpt-5-model-to-5ire-app)
 - [💬 Example Prompts](#-example-prompts)
 - [🛠 Available Tools](#available-tools)
-- [🤖 How to add GPT-5 model to 5ire App](#adding-gpt-5-model-to-5ire-app)
 - [🧯 Troubleshooting](#troubleshooting)
 - [🤝 Contributing](#contributing)
 - [📄 License](#license)
@@ -55,7 +55,7 @@ In **Terminal** run:
 
 Then download 5ire App and complete the MCP setup:
 
-### 5ire App Setup
+### Addding the MCP Server to 5ire App
 
 1. In 5ire App: **Tools → +Local button**
 2. This will open Add New Tool modal, fill in the details:
@@ -210,4 +210,4 @@ We welcome your contributions. Enhancements, bug reports, and documentation impr
 
 ## License
 
-This project is licensed under the [Apache 2.0](LICENSE).
+This project is licensed under the [Apache 2.0 license](LICENSE).
