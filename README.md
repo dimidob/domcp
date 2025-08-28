@@ -2,12 +2,12 @@
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache2.0-green.svg)](LICENSE)
 
-This MCP server enables interaction with your CloudConnexa environment through standardized tools that can be used by any MCP client of your choice, such as [5ire](https://5ire.app), [Claude Desktop](https://claude.ai/download) and [Cursor](https://docs.cursor.com/context/model-context-protocol). It empowers AI assistants to manage your CloudConnexa tenant and fulfil requests made in natural language.
+This MCP server enables interaction with your CloudConnexa environment through standardized tools that can be used by any MCP client of your choice, such as [5ire](https://5ire.app), [Claude Desktop](https://claude.ai/download) and [Cursor](https://docs.cursor.com/context/model-context-protocol). It empowers AI assistants to manage your CloudConnexa environment and fulfil requests made in natural language.
 
 ## Table of Contents
 
 - [ Prerequisites](#-prerequisites)
-- [ Setting up your OpenVPN MCP Server for CloudConnexa](#️-setting-up-your-openvpn-mcp-server-for-cloudconnexa)
+- [⚙️ Setting up your OpenVPN MCP Server for CloudConnexa](#️-setting-up-your-openvpn-mcp-server-for-cloudconnexa)
 - [Generate Your API Token](#1-generate-your-api-token)
 - [Add the MCP Server to Your MCP Client](#5ire-app-setup)
  - [How to add GPT-5 model to 5ire App](#adding-gpt-5-model-to-5ire-app)
@@ -40,7 +40,7 @@ To use the OpenVPN MCP Server for CloudConnexa, you’ll need:
 
 ---
 
-## Setting up your OpenVPN MCP Server for CloudConnexa
+## ⚙️ Setting up your OpenVPN MCP Server for CloudConnexa
 
 ### 1. Generate Your API Token
 
