@@ -187,11 +187,14 @@ Currently only read-only tools are available, but we are working on expanding th
 #### LLM replies that it can not find any MCP tools
 - Try running this prompt: "Discover graphql_schema" then try again.
 
-### API credentials not working?
+#### API credentials not working?
 
 - Try generating a new pair of credentials from CloudConnexa -> API & Logs -> API
 
 ---
+## Known issues
+GPT-4 and o4-mini models struggle to build correct MCP tool requests in some instances. In comparison GPT-5 shows significantly more accurate performance.
+
 
 ## Contributing
 
