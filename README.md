@@ -56,7 +56,7 @@ Then download 5ire App and complete the MCP setup:
 
 ## 🤖 Adding the MCP Server to 5ire App
 
-#### 1. In 5ire App: 
+#### 1. In 5ire App go to: 
 **Tools → +Local button**
 #### 2. This will open the "Add New Tool" modal. Fill in the following details:
 - **openvpnmcp** as **Tool Key**
@@ -64,14 +64,14 @@ Then download 5ire App and complete the MCP setup:
 - **http://0.0.0.0:9999/sse** as **URL**
 #### 3. Click **Save** 
 #### 4. Switch the **toggle** to **ON** to turn on the MCP server
-#### 6. Head to **Workspace → Providers** and add your LLM Provider API key. We recommend using **GPT-5** from OpenAI for best results
+#### 6. Head to **Workspace → Providers** and add your LLM Provider API key. 
 #### 7. Click **New Chat**
 #### 8. Select your desired LLM model and enter the prompt: **"Discover graphql_schema and tell me what tools are available?"**
 
 That's it, your MCP server is now connected to 5ire App and you can ask your AI assistant to execute any of the available tools. Check out the example prompts section in this README for some suggestions.
 
 ---
-### 🤖 Adding GPT-5 model to 5ire App
+## 🤖 Adding GPT-5 model to 5ire App
 
 GPT-5 has performed best during our tests, however it is not available by default in 5ire App. 
 Here are brief instructions on how to add it as an available model:
@@ -88,6 +88,7 @@ These are example values; you should adjust them based on your own cost estimati
 ## 💬 Example Prompts
 
 `"What are the available tools in graphql_schema"` 
+
 **This prompt is required to be run once in order for the MCP client to discover all available tools**
 
 Here are some examples of queries:
@@ -170,20 +171,20 @@ Currently only read-only tools are available, but we are working on expanding th
 ---
 
 ## Troubleshooting
-### GPT-5 model is not available
+#### GPT-5 model is not available
 - See the [How to add GPT-5 model to 5ire App](#adding-gpt-5-model-to-5ire-app) section
 
-### The LLM model does not support this temperature
+#### The LLM model does not support this temperature
 
 - GPT-5 model supports only temperature values of 1.0 or higher
 
-### Context window size reached
+#### Context window size reached
 - Just above the prompt in 5ire App you can change how many tokens should the context length be. If you often run into this error you can adjust this setting.
 
-### LLM replies that it can not reach MCP tools
+#### LLM replies that it can not reach MCP tools
 - Ensure that under **Tools**, the MCP server shows a green "Online" status, if not then turn the toggle ON. If it's still not working check in the terminal that the server is running.
 
-### LLM replies that it can not find any MCP tools
+#### LLM replies that it can not find any MCP tools
 - Try running this prompt: "Discover graphql_schema" then try again.
 
 ### API credentials not working?
