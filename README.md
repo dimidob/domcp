@@ -8,10 +8,10 @@ This MCP server enables interaction with your CloudConnexa environment through s
 
 - [📋 Prerequisites](#-prerequisites)
 - [⚙️ Setting up your OpenVPN MCP Server for CloudConnexa](#️-setting-up-your-openvpn-mcp-server-for-cloudconnexa)
-- [🤖 Addding the MCP Server to 5ire App](#5ire-app-setup)
-- [🤖 How to add GPT-5 model to 5ire App](#adding-gpt-5-model-to-5ire-app)
+- [🤖 Addding the MCP Server to 5ire App](#-5ire-app-setup)
+- [🤖 How to add GPT-5 model to 5ire App](#-adding-gpt-5-model-to-5ire-app)
 - [💬 Example Prompts](#-example-prompts)
-- [🛠 Available Tools](#available-tools)
+- [🛠 Available Tools](#-available-tools)
 - [🧯 Troubleshooting](#troubleshooting)
 - [🤝 Contributing](#contributing)
 - [📄 License](#license)
@@ -54,23 +54,23 @@ In **Terminal** run:
 
 Then download 5ire App and complete the MCP setup:
 
-### Addding the MCP Server to 5ire App
+## 🤖 Adding the MCP Server to 5ire App
 
-1. In 5ire App: **Tools → +Local button**
-2. This will open Add New Tool modal, fill in the details:
+### 1. In 5ire App: **Tools → +Local button**
+### 2. This will open Add New Tool modal, fill in the details:
 - **openvpnmcp** as **Tool Key**
 - **OpenVPN MCP** as **Name**
 - **http://0.0.0.0:9999/sse** as **URL**
-3. Click **Save** 
-4. Switch the **toggle** to **ON** to turn on the MCP server
-6. Head to **Workspace → Providers** and add your LLM Provider API key. We recommend using **GPT-5** from OpenAI for best results
-7. Click "**New Chat**"
-8. Select your desired LLM model and enter the prompt: **"Discover graphql_schema and tell me what tools are available?"**
+### 3. Click **Save** 
+### 4. Switch the **toggle** to **ON** to turn on the MCP server
+### 6. Head to **Workspace → Providers** and add your LLM Provider API key. We recommend using **GPT-5** from OpenAI for best results
+### 7. Click "**New Chat**"
+### 8. Select your desired LLM model and enter the prompt: **"Discover graphql_schema and tell me what tools are available?"**
 
 That's it, your MCP server is now connected to 5ire App and you can ask your AI assistant to execute any of the available tools. Check out the example prompts section in this README for some suggestions.
 
 ---
-### Adding GPT-5 model to 5ire App
+### 🤖 Adding GPT-5 model to 5ire App
 
 GPT-5 has performed best during our tests, however it is not available by default in 5ire App. 
 Here are brief instructions how to add it as an available model:
@@ -100,7 +100,7 @@ Currently only read-only tools are available, but we are working on expanding th
 
 ---
 
-## Available Tools
+## 🛠 Available Tools
 
 | Category                  | Tool                                       | Description                                                   |
 |--------------------------|--------------------------------------------|---------------------------------------------------------------|
