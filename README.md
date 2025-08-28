@@ -45,10 +45,10 @@ To use the OpenVPN MCP Server for CloudConnexa, you’ll need:
 Log in to [CloudConnexa](https://openvpn.net/cloud-vpn/) and go to **API & Logs** → **API** → **Create credentials**, fill in a name and click  **Create**
 Copy and save your **Public API Client ID** and **Public API Client Secret**
 
-### 2. In the root of the downloaded repository build the docker container:
+#### 2. In the root of the downloaded repository build the docker container:
 `docker build -t mcp-server-public .`
 
-### 3. Start the MCP server:
+#### 3. Start the MCP server:
 In **Terminal** run:
 `bash start.sh`
 
@@ -56,16 +56,16 @@ Then download 5ire App and complete the MCP setup:
 
 ## 🤖 Adding the MCP Server to 5ire App
 
-### 1. In 5ire App: **Tools → +Local button**
-### 2. This will open Add New Tool modal, fill in the details:
+#### 1. In 5ire App: **Tools → +Local button**
+#### 2. This will open Add New Tool modal, fill in the details:
 - **openvpnmcp** as **Tool Key**
 - **OpenVPN MCP** as **Name**
 - **http://0.0.0.0:9999/sse** as **URL**
-### 3. Click **Save** 
-### 4. Switch the **toggle** to **ON** to turn on the MCP server
-### 6. Head to **Workspace → Providers** and add your LLM Provider API key. We recommend using **GPT-5** from OpenAI for best results
-### 7. Click "**New Chat**"
-### 8. Select your desired LLM model and enter the prompt: **"Discover graphql_schema and tell me what tools are available?"**
+#### 3. Click **Save** 
+#### 4. Switch the **toggle** to **ON** to turn on the MCP server
+#### 6. Head to **Workspace → Providers** and add your LLM Provider API key. We recommend using **GPT-5** from OpenAI for best results
+#### 7. Click "**New Chat**"
+#### 8. Select your desired LLM model and enter the prompt: **"Discover graphql_schema and tell me what tools are available?"**
 
 That's it, your MCP server is now connected to 5ire App and you can ask your AI assistant to execute any of the available tools. Check out the example prompts section in this README for some suggestions.
 
@@ -74,13 +74,13 @@ That's it, your MCP server is now connected to 5ire App and you can ask your AI 
 
 GPT-5 has performed best during our tests, however it is not available by default in 5ire App. 
 Here are brief instructions how to add it as an available model:
-1. In 5ire App head to: **Workspace → Providers → OpenAI**  and click the "+ Model" button
-2. Fill in **gpt-5** for **Name** and **Display Name**
-3. Set **Context Window** to **400000** and Max Tokens to **16384** - 
-4. Set **Input Price** to **$1.25** and **Output Price** to **$0**
-5. Toggle **Tools** to **ON**
-6. Click **Save**
-7. Go to **New Chat** change temperature to 1.0 (GPT-5 requires >1) and adjust **Max Tokens** value
+#### 1. In 5ire App head to: **Workspace → Providers → OpenAI**  and click the "+ Model" button
+#### 2. Fill in **gpt-5** for **Name** and **Display Name**
+#### 3. Set **Context Window** to **400000** and Max Tokens to **16384** - 
+#### 4. Set **Input Price** to **$1.25** and **Output Price** to **$0**
+#### 5. Toggle **Tools** to **ON**
+#### 6. Click **Save**
+#### 7. Go to **New Chat** change temperature to 1.0 (GPT-5 requires >1) and adjust **Max Tokens** value
 
 Those are some example values, you should adjust them in accordance with your own cost estimation of using GPT-5.
 
