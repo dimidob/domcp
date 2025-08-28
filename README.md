@@ -17,7 +17,7 @@ This MCP server enables interaction with your CloudConnexa environment through s
 - [📄 License](#license)
 
 
-## 🧰 Prerequisites
+## Prerequisites
 
 To use the OpenVPN MCP Server for CloudConnexa, you’ll need:
 
@@ -34,7 +34,6 @@ To use the OpenVPN MCP Server for CloudConnexa, you’ll need:
   - [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)
   - [Cursor](https://docs.cursor.com/context/model-context-protocol)
   - [VS Code](https://code.visualstudio.com/) with [Cline plugin](vscode:extension/saoudrizwan.claude-dev)
-- (Optional): [GitHub CLI (gh)](https://cli.github.com) 
 
 
 ---
@@ -70,8 +69,6 @@ Then download 5ire App and complete the MCP setup:
 
 That's it, your MCP server is now connected to 5ire App and you can ask your AI assistant to execute any of the available tools. Check out the example prompts section in this README for some suggestions.
 
-_Setting up OpenVPN MCP Server in 5ire App_
-
 ---
 ### Adding GPT-5 model to 5ire App
 
@@ -89,10 +86,8 @@ Those are some example values, you should adjust them in accordance with your ow
 
 ## 💬 Example Prompts
 
-Here are some examples you can ask your AI assistant:
-
-`"What are the available tools in graphql_schema"` - **This prompt is required to be run once in order for the MCP client to discover all available tools**
-It will display all available MCP tools, then you can ask anything based on them. 
+`"What are the available tools in graphql_schema"` 
+**This prompt is required to be run once in order for the MCP client to discover all available tools**
 
 Here are some examples of queries:
 ```
