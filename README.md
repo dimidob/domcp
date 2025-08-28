@@ -8,7 +8,7 @@ This MCP server enables interaction with your CloudConnexa environment through s
 
 - [📋 Prerequisites](#-prerequisites)
 - [⚙️ Setting up your OpenVPN MCP Server for CloudConnexa](#️-setting-up-your-openvpn-mcp-server-for-cloudconnexa)
-- [🤖 Addding the MCP Server to 5ire App](#-5ire-app-setup)
+- [🤖 Adding the MCP Server to 5ire App](#-5ire-app-setup)
 - [🤖 How to add GPT-5 model to 5ire App](#-adding-gpt-5-model-to-5ire-app)
 - [💬 Example Prompts](#-example-prompts)
 - [🛠 Available Tools](#-available-tools)
@@ -42,8 +42,8 @@ To use the OpenVPN MCP Server for CloudConnexa, you’ll need:
 
 #### 1. Generate Your API Token
 
-Log in to [CloudConnexa](https://openvpn.net/cloud-vpn/) and go to **API & Logs** → **API** → **Create credentials**, fill in a name and click  **Create**
-Copy and save your **Public API Client ID** and **Public API Client Secret**
+Log in to [CloudConnexa](https://openvpn.net/cloud-vpn/) and navigate to **API & Logs → API → Create credentials**.  
+Fill in a name, click **Create**, and copy your **Public API Client ID** and **Public API Client Secret**.
 
 #### 2. In the root of the downloaded repository build the docker container:
 `docker build -t mcp-server-public .`
@@ -58,7 +58,7 @@ Then download 5ire App and complete the MCP setup:
 
 #### 1. In 5ire App: 
 **Tools → +Local button**
-#### 2. This will open Add New Tool modal, fill in the details:
+#### 2. This will open the "Add New Tool" modal. Fill in the following details:
 - **openvpnmcp** as **Tool Key**
 - **OpenVPN MCP** as **Name**
 - **http://0.0.0.0:9999/sse** as **URL**
@@ -74,7 +74,7 @@ That's it, your MCP server is now connected to 5ire App and you can ask your AI 
 ### 🤖 Adding GPT-5 model to 5ire App
 
 GPT-5 has performed best during our tests, however it is not available by default in 5ire App. 
-Here are brief instructions how to add it as an available model:
+Here are brief instructions on how to add it as an available model:
 #### 1. In 5ire App head to: **Workspace → Providers → OpenAI**  and click the "+ Model" button
 #### 2. Fill in **gpt-5** for **Name** and **Display Name**
 #### 3. Set **Context Window** to **400000** and Max Tokens to **16384** - 
@@ -83,7 +83,7 @@ Here are brief instructions how to add it as an available model:
 #### 6. Click **Save**
 #### 7. Go to **New Chat** change temperature to 1.0 (GPT-5 requires >1) and adjust **Max Tokens** value
 
-Those are some example values, you should adjust them in accordance with your own cost estimation of using GPT-5.
+These are example values; you should adjust them based on your own cost estimation for using GPT-5.
 
 ## 💬 Example Prompts
 
@@ -92,10 +92,10 @@ Those are some example values, you should adjust them in accordance with your ow
 
 Here are some examples of queries:
 ```
-“Which users are online right now?”
-“What is my device posture policy?”
-“Show DNS logs for yesterday”
-“Show me a summary of my configuration”
+"Which users are online right now?"
+"What is my device posture policy?"
+"Show DNS logs for yesterday"
+"Show me a summary of my configuration"
 ```
 Currently only read-only tools are available, but we are working on expanding the list of available tools.
 
@@ -175,13 +175,13 @@ Currently only read-only tools are available, but we are working on expanding th
 
 ### The LLM model does not support this temperature
 
-- GPT-5 model supports only temperature 1.0 and greater
+- GPT-5 model supports only temperature values of 1.0 or higher
 
 ### Context window size reached
 - Just above the prompt in 5ire App you can change how many tokens should the context length be. If you often run into this error you can adjust this setting.
 
 ### LLM replies that it can not reach MCP tools
-- Ensure that under Tools the MCP server has a green online status, if not then turn the toggle ON. If it's still not working check in the terminal that the server is running.
+- Ensure that under **Tools**, the MCP server shows a green "Online" status, if not then turn the toggle ON. If it's still not working check in the terminal that the server is running.
 
 ### LLM replies that it can not find any MCP tools
 - Try running this prompt: "Discover graphql_schema" then try again.
