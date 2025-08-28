@@ -50,6 +50,7 @@ Fill in a name, click **Create**, and copy your **Public API Client ID** and **P
 
 #### 3. Start the MCP server:
 In **Terminal** run:
+
 `bash start.sh`
 
 Then download 5ire App and complete the MCP setup:
