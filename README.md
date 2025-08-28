@@ -62,9 +62,10 @@ Then download 5ire App and complete the MCP setup:
 - **openvpnmcp** as **Tool Key**
 - **OpenVPN MCP** as **Name**
 - **http://0.0.0.0:9999/sse** as **URL**
+  
  **3.** Click **Save** 
  **4.** Switch the **toggle** to **ON** to turn on the MCP server
- **6.** Head to **Workspace → Providers** and add your LLM Provider API key. 
+ **6.** Head to **Workspace → Providers** and add your LLM Provider API key
  **7.** Click **New Chat**
  **8.** Select your desired LLM model and enter the prompt: **"Discover graphql_schema and tell me what tools are available?"**
 
