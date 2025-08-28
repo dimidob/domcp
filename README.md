@@ -6,7 +6,7 @@ This MCP server enables interaction with your CloudConnexa environment through s
 
 ## Table of Contents
 
-- [ Prerequisites](#-prerequisites)
+- [📋 Prerequisites](#-prerequisites)
 - [⚙️ Setting up your OpenVPN MCP Server for CloudConnexa](#️-setting-up-your-openvpn-mcp-server-for-cloudconnexa)
 - [🤖 Addding the MCP Server to 5ire App](#5ire-app-setup)
 - [🤖 How to add GPT-5 model to 5ire App](#adding-gpt-5-model-to-5ire-app)
@@ -17,7 +17,7 @@ This MCP server enables interaction with your CloudConnexa environment through s
 - [📄 License](#license)
 
 
-## Prerequisites
+## 📋 Prerequisites
 
 To use the OpenVPN MCP Server for CloudConnexa, you’ll need:
 
