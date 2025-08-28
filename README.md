@@ -186,7 +186,7 @@ Currently only read-only tools are available, but we are working on expanding th
 
 ## Troubleshooting
 #### GPT-5 model is not available
-- See the [How to add GPT-5 model to 5ire App](#adding-gpt-5-model-to-5ire-app) section
+- See the [How to add GPT-5 model to 5ire App](#-adding-gpt-5-model-to-5ire-app) section
 
 #### The LLM model does not support this temperature
 
