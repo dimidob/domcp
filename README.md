@@ -40,7 +40,7 @@ To use the OpenVPN MCP Server for CloudConnexa, you’ll need:
 
 ## ⚙️ Setting up your OpenVPN MCP Server for CloudConnexa
 
-### 1. Generate Your API Token
+#### 1. Generate Your API Token
 
 Log in to [CloudConnexa](https://openvpn.net/cloud-vpn/) and go to **API & Logs** → **API** → **Create credentials**, fill in a name and click  **Create**
 Copy and save your **Public API Client ID** and **Public API Client Secret**
