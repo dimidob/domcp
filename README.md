@@ -7,45 +7,27 @@ This MCP server enables interaction with your CloudConnexa environment through s
 ## Table of Contents
 
 - [ Prerequisites](#-prerequisites)
-- [ Setting up your MCP Server](#️-setting-up-your-openvpn-mcp-server-for-cloudconnexa)
-
-  - [Generate Your API Token](#1-generate-your-api-token)
-  - [Add the Server to Your MCP Client](#2-add-the-server-to-your-mcp-client)
-  - [5ire App](#5ire-app-setup)
-
-- [How to add GPT-5 model to 5ire App](#adding-gpt-5-model-to-5ire-app)
+- [ Setting up your OpenVPN MCP Server for CloudConnexa](#️-setting-up-your-openvpn-mcp-server-for-cloudconnexa)
+- [Generate Your API Token](#1-generate-your-api-token)
+- [Add the MCP Server to Your MCP Client](#5ire-app-setup)
+ - [How to add GPT-5 model to 5ire App](#adding-gpt-5-model-to-5ire-app)
 - [💬 Example Prompts](#-example-prompts)
 - [🛠 Available Tools](#available-tools)
 - [🧯 Troubleshooting](#troubleshooting)
 - [🤝 Contributing](#contributing)
 - [📄 License](#license)
 
----
-
-## 🚀 What Can You Do With It?
-
-You can now do things like:
-
-- **Deploy a new app** from a GitHub repo
-- **Quickly redeploy an existing app** with the latest changes
-- **See logs,** restart components, or delete old environments
-- **Check available regions** and create apps based on what’s supported
-- **Build and deploy an app from scratch**, entirely through your assistant
-
-...and more!
-
----
 
 ## 🧰 Prerequisites
 
 To use the OpenVPN MCP Server for CloudConnexa, you’ll need:
 
-- A [CloudConnexa account](https://openvpn.net)
+- [CloudConnexa account](https://openvpn.net)
 - [Docker](https://docker.com):
- - Visit docker.com
- - Download Docker desktop for your operating system
- - Install Docker by following the instructions for your operating system
- - Open Docker and ensure it is running
+  - Visit docker.com
+  - Download Docker desktop for your operating system
+  - Install Docker by following the instructions for your operating system
+  - Open Docker and ensure it is running
   
 - A supported MCP client (any of those):
   - [5ire](https://5ire.app) 
@@ -53,7 +35,7 @@ To use the OpenVPN MCP Server for CloudConnexa, you’ll need:
   - [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)
   - [Cursor](https://docs.cursor.com/context/model-context-protocol)
   - [VS Code](https://code.visualstudio.com/) with [Cline plugin](vscode:extension/saoudrizwan.claude-dev)
-- (Optional): [GitHub CLI (gh)](https://cli.github.com) - useful for cloning repos, creating projects, and working with GitHub-based apps.
+- (Optional): [GitHub CLI (gh)](https://cli.github.com) 
 
 
 ---
@@ -62,8 +44,8 @@ To use the OpenVPN MCP Server for CloudConnexa, you’ll need:
 
 ### 1. Generate Your API Token
 
-Log in to [CloudConnexa](https://openvpn.net/cloud-vpn/) and go to **API & Logs ** → **API** → **Create credentials**, fill in a name and click  **Create**.
-Copy and save your **Public API Client ID** and **Public API Client Secret**.
+Log in to [CloudConnexa](https://openvpn.net/cloud-vpn/) and go to **API & Logs** → **API** → **Create credentials**, fill in a name and click  **Create**
+Copy and save your **Public API Client ID** and **Public API Client Secret**
 
 ### 2. In the root of the downloaded repository build the docker container:
 `docker build -t mcp-server-public .`
@@ -82,8 +64,8 @@ Then download 5ire App and complete the MCP setup:
 - **OpenVPN MCP** as **Name**
 - **http://0.0.0.0:9999/sse** as **URL**
 3. Click **Save** 
-4. Switch the **toggle** to **ON** to turn on the MCP server.
-6. Head to **Workspace → Providers** and add your LLM Provider API key. We recommend using **GPT-5** from OpenAI for best results.
+4. Switch the **toggle** to **ON** to turn on the MCP server
+6. Head to **Workspace → Providers** and add your LLM Provider API key. We recommend using **GPT-5** from OpenAI for best results
 7. Click "**New Chat**"
 8. Select your desired LLM model and enter the prompt: **"Discover graphql_schema and tell me what tools are available?"**
 
@@ -96,13 +78,13 @@ _Setting up OpenVPN MCP Server in 5ire App_
 
 GPT-5 has performed best during our tests, however it is not available by default in 5ire App. 
 Here are brief instructions how to add it as an available model:
-1. In 5ire App head to: **Workspace → Providers → OpenAI**  and click the "+ Model" button.
+1. In 5ire App head to: **Workspace → Providers → OpenAI**  and click the "+ Model" button
 2. Fill in **gpt-5** for **Name** and **Display Name**
 3. Set **Context Window** to **400000** and Max Tokens to **16384** - 
 4. Set **Input Price** to **$1.25** and **Output Price** to **$0**
 5. Toggle **Tools** to **ON**
 6. Click **Save**
-7. Go to **New Chat** change temperature to 1.0 (GPT-5 requires >1) and adjust **Max Tokens** value.
+7. Go to **New Chat** change temperature to 1.0 (GPT-5 requires >1) and adjust **Max Tokens** value
 
 Those are some example values, you should adjust them in accordance with your own cost estimation of using GPT-5.
 
@@ -110,7 +92,7 @@ Those are some example values, you should adjust them in accordance with your ow
 
 Here are some examples you can ask your AI assistant:
 
-`"What are the available tools in graphql_schema"`  **This prompt is required to be run once in order for the MCP client to discover all available tools**
+`"What are the available tools in graphql_schema"` - **This prompt is required to be run once in order for the MCP client to discover all available tools**
 It will display all available MCP tools, then you can ask anything based on them. 
 
 Here are some examples of queries:
